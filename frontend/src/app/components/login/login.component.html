@@ -1,0 +1,45 @@
+<div style="padding-top: 140px;">
+
+    <br>
+
+    <mat-card class="center">
+
+
+      <mat-divider></mat-divider>
+      <br>
+      <form [formGroup]="createForm" class="create-form">
+                <mat-form-field appearance="fill" class="field-full-width">
+                    <mat-label color=blue> Username</mat-label>
+                    <input align="start" matInput  formControlName="find" #find>
+                  </mat-form-field>
+
+                  <br><br>
+
+                <mat-form-field appearance="fill"  class="field-full-width">
+                    <mat-label color=blue> Password</mat-label>
+                    <input  matInput [type]="hide ? 'password' : 'text'" align="start" matInput  formControlName="where" #where>
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                      </button>
+                  </mat-form-field>
+
+                  <br><br>
+                <!-- <mat-divider></mat-divider> -->
+                  <div class="vertical-center">
+                <button type="submit" (click)="validateDetails(find.value,  where.value)" mat-raised-button >
+                    Login
+                    &nbsp; &nbsp; &nbsp;
+                    <mat-icon>search</mat-icon>
+                </button>
+
+                &nbsp; &nbsp; &nbsp;
+                <button type="submit" (click)="findRegisterPage()"  mat-raised-button >
+                  Register
+                  &nbsp; &nbsp; &nbsp;
+                  <mat-icon>search</mat-icon>
+              </button>
+            </div>
+
+      </form>
+    </mat-card>
+  </div>

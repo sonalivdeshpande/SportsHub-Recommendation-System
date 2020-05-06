@@ -1,0 +1,63 @@
+<div>
+<mat-divider></mat-divider>
+&nbsp; &nbsp; &nbsp;
+    <mat-card>
+      <div class="vertical-center">
+      <button mat-raised-button color="primary" routerLink="/login" style="float: left;" >
+            Home
+            &nbsp; &nbsp; &nbsp;
+            <mat-icon>home</mat-icon>
+          </button>
+          &nbsp; &nbsp; &nbsp;
+          <button mat-raised-button color="primary" routerLink="/ticketMasterAPI" >
+                TicketMaster API
+                &nbsp; &nbsp; &nbsp;
+                <mat-icon>assignment_returned</mat-icon>
+              </button>
+              &nbsp; &nbsp; &nbsp;
+              <button mat-raised-button color="primary" routerLink="/stubHubAPI" >
+                    StubHub API
+                    &nbsp; &nbsp; &nbsp;
+                    <mat-icon>assignment_returned</mat-icon>
+                  </button>
+                  &nbsp; &nbsp; &nbsp;
+          <!-- <button mat-raised-button color="primary" routerLink="/recommend" >
+                Divvy Stations
+                &nbsp; &nbsp; &nbsp;
+                <mat-icon>bar_chart</mat-icon>
+              </button> -->
+              <button mat-raised-button color="primary" routerLink="/heat_map">
+                Heatmaps
+                &nbsp; &nbsp; &nbsp;
+                <mat-icon>add_location</mat-icon>
+          </button>  
+              &nbsp; &nbsp; &nbsp;
+          <button mat-raised-button color="primary" routerLink="/viewreviewrate" >
+                View Review & Rating
+                &nbsp; &nbsp; &nbsp;
+                <mat-icon>rate_review</mat-icon>
+              </button>
+              &nbsp; &nbsp; &nbsp;
+              <button mat-raised-button color="primary" routerLink="/chart" >
+                Charts
+                &nbsp; &nbsp; &nbsp;
+                <mat-icon>bar_chart</mat-icon>
+              </button>
+      <br><br>
+    </div>
+    </mat-card>
+    <br><br>
+    &nbsp; &nbsp; &nbsp;
+    &nbsp; &nbsp; &nbsp;
+    <div class="vertical-center"><th>Events you might be interested in...</th> </div>
+
+    <div class="vertical-center">
+   <mat-nav-list style="width: 1000px;">
+    <mat-list-item *ngFor="let recomm of recommendationList">
+       <a matLine >{{ recomm }}</a>
+       <button mat-raised-button color="primary" (click)="navigateEventPage(recomm)"  >View Details</button>
+    </mat-list-item>
+  </mat-nav-list>
+  </div>
+  </div>
+  

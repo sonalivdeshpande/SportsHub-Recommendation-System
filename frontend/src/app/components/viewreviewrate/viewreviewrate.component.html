@@ -1,0 +1,50 @@
+<div>
+
+    <mat-card>
+      <button mat-raised-button color="primary" routerLink="/recommend" style="float: right;margin-right:20px;" >
+        Go Back
+            &nbsp; &nbsp; &nbsp;
+            <mat-icon>keyboard_backspace</mat-icon>
+          </button>
+          &nbsp; &nbsp; &nbsp;
+      <br><br>
+    </mat-card>
+
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Event Name </th>
+        <td mat-cell *matCellDef="let element">{{element.eventname}}</td>
+      </ng-container>
+    
+      <!-- Name Column -->
+      <ng-container matColumnDef="review">
+        <th mat-header-cell *matHeaderCellDef> Review </th>
+        <td mat-cell *matCellDef="let element">{{element.reviews}}</td>
+      </ng-container>
+    
+      <ng-container matColumnDef="rating">
+        <th mat-header-cell *matHeaderCellDef> Rating </th>
+        <td mat-cell *matCellDef="let element">{{element.ratings}}</td>
+      </ng-container>
+      
+      <ng-container matColumnDef="edit">
+        <th mat-header-cell  *matHeaderCellDef >Edit Review & Rating</th>
+        <td mat-cell *matCellDef="let element" class="mat-column-left">
+          <button mat-raised-button color="primary" (click)="navigateToEditReviewRating(element.eventname, element.reviews, element.ratings)">Edit Review & Rating</button>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="delete">
+        <th mat-header-cell  *matHeaderCellDef >Delete Review & Rating</th>
+        <td mat-cell *matCellDef="let element" class="mat-column-left">
+          <button mat-raised-button color="primary" (click)="delete_user_details(element.eventname)">Delete Review & Rating</button>
+        </td>
+      </ng-container>
+    
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+  </div>
+  

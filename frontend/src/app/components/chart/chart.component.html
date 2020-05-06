@@ -1,0 +1,37 @@
+<br>
+<mat-card >
+
+<button mat-raised-button color="primary" routerLink="/recommend" style="float: right;margin-right:20px;" >
+      Go Back
+      &nbsp; &nbsp; &nbsp;
+      <mat-icon>keyboard_backspace</mat-icon>
+</button>
+
+<button mat-raised-button color="primary" (click)="findRatingChart()" style="float: left;margin-left:20px;" >
+    Rating Chart
+</button>
+
+<button mat-raised-button color="primary" (click)="findReviewChart()"  style="float: left;margin-left:80px;" >
+    Review Chart
+</button>
+
+<br>
+<h2>{{ title }}</h2>
+<svg width="1000" height="600"></svg>
+<!-- <button type="submit" (click)="findRatingChart()"  mat-raised-button>
+      Rating Chart
+      &nbsp; &nbsp; &nbsp;
+      <mat-icon>bar-chart</mat-icon>
+  </button>
+
+  <button type="submit" (click)="findReviewChart()"  mat-raised-button>
+      Reviews Chart
+      &nbsp; &nbsp; &nbsp;
+      <mat-icon>bar-chart</mat-icon>
+  </button> -->
+
+
+
+</mat-card>
+
+

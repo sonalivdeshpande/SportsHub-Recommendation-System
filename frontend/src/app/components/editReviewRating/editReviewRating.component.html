@@ -1,0 +1,48 @@
+<div>
+
+  <br>
+
+  <mat-card>
+
+<button mat-raised-button color="primary" routerLink="/login" style="float: left;" >
+            Home
+            &nbsp; &nbsp; &nbsp;
+            <mat-icon>home</mat-icon>
+          </button>
+          <button mat-raised-button color="primary" routerLink="/recommend" style="float: right;margin-right:20px;" >
+            Go Back
+            &nbsp; &nbsp; &nbsp;
+            <mat-icon>keyboard_backspace</mat-icon>
+      </button>
+<br><br>
+<br><br>
+    <mat-divider></mat-divider>
+    <br>
+    <form [formGroup]="createForm" class="create-form">
+      <th>{{eventName}}</th>
+
+              <mat-form-field appearance="fill" class="field-full-width">
+                  <mat-label color=blue>Review</mat-label>
+                  <input align="start" matInput value={{review}} formControlName="Review" #Review>
+                </mat-form-field>
+
+              <mat-form-field appearance="fill"  class="field-full-width">
+                  <mat-label color=blue>Rating</mat-label>
+                  <input align="start" matInput value={{rate}} formControlName="Rating" #Rating>
+
+                </mat-form-field>
+
+                <br><br>
+
+              <mat-divider></mat-divider>
+                <br><br>
+
+              <button  type="submit" (click)="update_user_details(eventName,Review.value,Rating.value)" mat-raised-button>
+                  Submit
+                  &nbsp; &nbsp; &nbsp;
+                  <mat-icon>verified_user</mat-icon>
+              </button>
+              <br><br>
+    </form>
+  </mat-card>
+</div>

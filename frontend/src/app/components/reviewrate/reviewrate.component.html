@@ -1,0 +1,48 @@
+<div>
+
+  <mat-card>
+    <button mat-raised-button color="primary" routerLink="/recommend" style="float: left;" >
+          Go Back
+          &nbsp; &nbsp; &nbsp;
+          <mat-icon>keyboard_backspace</mat-icon>
+        </button>
+        &nbsp; &nbsp; &nbsp;
+    <br><br>
+  </mat-card>
+
+    <br>
+
+    <mat-card>
+
+
+      <mat-divider></mat-divider>
+      <br>
+      <form [formGroup]="createForm" class="create-form">
+                  <th>{{ name }}</th>
+                  <br><br>
+                  <th>{{ name1 }}</th>
+                  <br><br>
+
+                <mat-form-field appearance="fill"  class="field-full-width">
+                    <mat-label color=blue>Review</mat-label>
+                    <input align="start" matInput  formControlName="review" #review>
+                  </mat-form-field>
+
+                  <br><br>
+
+                  <mat-form-field appearance="fill" class="field-full-width">
+                    <mat-label color=blue>Rating</mat-label>
+                    <input align="start" matInput  formControlName="rating" #rating>
+                  </mat-form-field>
+
+                  <br><br>  
+
+                  <br><br>
+                <button type="submit" (click)="get_reviewrating(review.value,rating.value)"  mat-raised-button >
+                  Submit
+                  &nbsp; &nbsp; &nbsp;
+                  <mat-icon>verified_user</mat-icon>
+              </button>
+      </form>
+    </mat-card>
+  </div>

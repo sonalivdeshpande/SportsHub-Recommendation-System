@@ -1,0 +1,13 @@
+.mat-toolbar {
+    background: black;
+    color: white;
+
+}
+  .fill-remaining-space {
+    text-align: center;
+    flex: 1 1 auto;
+
+  }
+
+
+ 

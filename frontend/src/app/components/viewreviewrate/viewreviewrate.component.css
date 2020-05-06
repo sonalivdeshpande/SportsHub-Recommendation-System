@@ -1,0 +1,19 @@
+table {
+    width: 100%;
+  }
+.mat-column-right {
+    text-align: center;
+}
+
+
+agm-map {
+    height: 500px;
+}
+.mat-icon {
+    background: black;
+    color: grey;
+}
+
+.mat-button, .mat-raised-button{
+    background-color:black;
+}

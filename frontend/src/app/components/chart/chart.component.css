@@ -1,0 +1,26 @@
+:host ::ng-deep .bar {
+    fill: black;
+}
+
+:host ::ng-deep .bar:hover {
+    fill: brown;
+}
+
+:host ::ng-deep .axis-title {
+    fill: none;
+    stroke: black;
+    stroke-width: 0.5px;
+}
+:host ::ng-deep .space {
+    padding-right: 20px;
+}
+
+.mat-icon {
+    background: black;
+    color: grey;
+  }
+  
+  .mat-button, .mat-raised-button{
+    background-color: black;
+    color: white;
+  }
