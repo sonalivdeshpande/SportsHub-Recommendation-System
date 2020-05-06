@@ -1,6 +1,9 @@
-﻿1. Total number codes :  Approximately 6000
-
-
+- User event suggestions based on their profile and search histories using Recombee database.
+- Display recent and upcoming events according to users location using two different sports APIs, ticketMaster and StubHub.
+- User gets recommendations for the sports event he is interested in mentioning during registration.
+- Display review counts and ratings using bar-chart for the search results for top rated events.
+- Show the HeatMaps for the different review counts and ratings for the search results
+- Implemented using AngularJS, Python and Javascript
 
 
 Following the below steps to run the application:
